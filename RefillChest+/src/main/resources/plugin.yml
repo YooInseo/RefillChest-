@@ -1,0 +1,5 @@
+name: RefillChestPlus
+version: '1.0'
+main: refillchestplus.refillchestplus.RefillChestPlus
+commands:
+  refill:
