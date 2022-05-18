@@ -1,6 +1,5 @@
 package refillchestplus.refillchestplus.cmd;
 
-
 import de.tr7zw.nbtapi.NBTCompound;
 import de.tr7zw.nbtapi.NBTItem;
 import org.bukkit.Location;
@@ -98,7 +97,7 @@ public class cmd implements CommandExecutor {
                 case "list":
                     name = args[1];
 
-                    Util.GetList(name, player);
+                    Util.GetItemList(name, player);
                     break;
                 case "cooltime":
                     name = args[1];
@@ -131,14 +130,19 @@ public class cmd implements CommandExecutor {
         if (player.isOp()) {
             player.sendMessage("§b순서에 맞게 명령어 목록을 적어 뒀습니다. §7회색색깔§b로 되어있는건 별로 중요하지 않다는 뜻 입니다.");
             player.sendMessage("0. §a/refill name <이름> - 등록된 이름을 초기화 & 생성 합니다. ");
-            player.sendMessage("    §c초기에 한번만 쳐 주시고 그 뒤로 안치셔도 됩니다,");
+            player.sendMessage("        §c초기에 한번만 쳐 주시고 그 뒤로 안치셔도 됩니다.");
             player.sendMessage("1. §a/refill create <이름> - 새로운 리스트를 생성합니다.");
             player.sendMessage("4. §a/refill chest <이름>- 보고 있는 상자를 추가합니다,");
             player.sendMessage("5. §a/refill add <이름> - 손에 들고 있는 아이템을 보고있는 상자 추가 합니다.");
             player.sendMessage("6. §a/refill max <이름> <index> <max>- 해당 이름의 index번호에 상자에 아이템 최대 등장 개수를 설정합니다.");
             player.sendMessage("7. §7/refill cooltime <이름> <index> <cooltime> - 상자의 쿨타임을 설정합니다.");
             player.sendMessage("8. §7/refill chance <이름> <index> <Chance>- 아이템의 확률을 설정합니다.");
-            player.sendMessage("9. §7/refill list <이름>- 아이템 확률의 리스트를 봅니다.");
+            player.sendMessage("9. §7/refill list item <이름>- 해당 이름의 아이템 목록과 아이템 확률의 리스트를 봅니다.");
+            player.sendMessage("9. §7/refill list chest <이름>- 해당 이름의 상자리스트를 봅니다.");
+
+            player.sendMessage("0. §a/refill remove chest <이름> <index> - 해당 이름의 번호에 상자를 +삭제합니다. ");
+            player.sendMessage("0. §a/refill remove item <이름> <index> - 해당 이름의 번호에 아이템을 삭제합니다. ");
+
         }
     }
 }

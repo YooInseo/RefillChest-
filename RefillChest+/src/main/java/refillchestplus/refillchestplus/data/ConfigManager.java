@@ -3,7 +3,6 @@ package refillchestplus.refillchestplus.data;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import refillchestplus.refillchestplus.RefillChestPlus;
-
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,8 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ConfigManager {
-
-
     public FileConfiguration config;
     public File file;
     private String name;
@@ -70,7 +67,7 @@ public class ConfigManager {
     }
 
     public Object get(String path){
-        return this.config.get(path);
+            return this.config.get(path);
     }
 
     public void removeObject(String path, Object obj ){
@@ -100,7 +97,7 @@ public class ConfigManager {
 
      *   public void addPlayer(Player player){
 
-     *   config.addObject();
+     *   config.addObject("player", player);
      *   }
      *
      * }</pre>
